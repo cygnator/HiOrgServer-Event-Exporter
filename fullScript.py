@@ -11,7 +11,7 @@ import os
 load_dotenv(dotenv_path="/var/www/hiorg-exporter/.env")
 
 # === Configuration ===
-BASEDIR = Path("/var/www") / "hiorg-exporter"
+BASEDIR = os.getenv("BASE_DIR")
 TYPO3_PROJECT_DIR = os.getenv("TYPO3_PROJECT_DIR")
 IMPORT_URL = "http://192.168.188.123/fileadmin/eventImport/new_events.xml"
 STORAGE_PID = "649"
@@ -32,7 +32,7 @@ typo3_cmd = [
     "xml",
     "1", "", "", "", CATEGORY_MAPPING
 ]
-if Path("/var/www/DRK-Goehl_Webseite/public/fileadmin/eventImport/new_events.xml").exists():
+if Path(f"{TYPO3_PROJECT_DIR}/public/fileadmin/eventImport/new_events.xml").exists():
     print("▶ Importing XML into TYPO3 News...")
     subprocess.run(typo3_cmd, cwd=str(TYPO3_PROJECT_DIR), check=True)
 else:
