@@ -16,8 +16,8 @@ load_dotenv(dotenv_path="/var/www/hiorg-exporter/.env")
 
 # === Configuration ===
 REMOTE_URL = os.getenv("REMOTE_URL")
-BASE_DIR = os.getenv("BASE_DIR")
-TYPO3_PROJECT_DIR = os.getenv("TYPO3_PROJECT_DIR")
+BASE_DIR = Path(os.getenv("BASE_DIR"))
+TYPO3_PROJECT_DIR = Path(os.getenv("TYPO3_PROJECT_DIR"))
 TYPO3_URL = os.getenv("TYPO3_URL")
 ALL_EVENTS_FILE = f"{TYPO3_PROJECT_DIR}/hiorgServerFullEvents.json"
 NEW_RSS_FILE = f"{TYPO3_PROJECT_DIR}public/fileadmin/eventImport/new_events.xml"
