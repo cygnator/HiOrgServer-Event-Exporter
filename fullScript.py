@@ -26,7 +26,7 @@ subprocess.run([sys.executable, str(exporter)], check=True)
 
 # === Step 2: Run TYPO3 Importer CLI Command ===
 typo3_cmd = [
-    str(TYPO3_PROJECT_DIR / "vendor/bin/typo3"),
+    str("{TYPO3_PROJECT_DIR}/vendor/bin/typo3"),
     "news:importicsxml",
     IMPORT_URL,
     STORAGE_PID,
