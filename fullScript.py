@@ -13,9 +13,10 @@ load_dotenv(dotenv_path="/var/www/hiorg-exporter/.env")
 # === Configuration ===
 BASEDIR = os.getenv("BASE_DIR")
 TYPO3_PROJECT_DIR = os.getenv("TYPO3_PROJECT_DIR")
-IMPORT_URL = "http://192.168.188.123/fileadmin/eventImport/new_events.xml"
-STORAGE_PID = "649"
-CATEGORY_MAPPING = "572:Veranstaltungen"
+TYPO3_URL = os.getenv("TYPO3_URL")
+IMPORT_URL = TYPO3_URL / "/fileadmin/eventImport/new_events.xml"
+STORAGE_PID = os.getenv("STORAGE_PID")
+CATEGORY_MAPPING = os.getenv("CATEGORY_MAPPING")
 
 print(f"\n=== Log from {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===\n")
 # === Step 1: Run XML Exporter ===
