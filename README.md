@@ -23,8 +23,8 @@ TYPO3_PROJECT_DIR = {Typo 3 Website document root}
 STORAGE_PID = {UID of Import storage in typo3}
 CATEGORY_MAPPING = "{Mapping for Category: uid of category:"Veranstalltung"}"
 TYPO3_URL = "{URL of Typo3 Site}"
-DEFAULT_IMAGE = TYPO3_URL / "{fileadmin path for Default Image}"
-BEREITSCHAFT_IMAGE = TYPO3_URL / "{fileadmin path for Dienstabend Image}"
-BLUTSPENDE_IMAGE = TYPO3_URL / "{fileadmin path for Blutspende Image}"
+DEFAULT_IMAGE = "${TYPO3_URL}/{fileadmin path for Default Image}"
+BEREITSCHAFT_IMAGE = "${TYPO3_URL}/{fileadmin path for Dienstabend Image}"
+BLUTSPENDE_IMAGE = "${TYPO3_URL}/{fileadmin path for Blutspende Image}"
 
 ```
