@@ -14,7 +14,7 @@ load_dotenv(dotenv_path="/var/www/hiorg-exporter/.env")
 BASEDIR = os.getenv("BASE_DIR")
 TYPO3_PROJECT_DIR = os.getenv("TYPO3_PROJECT_DIR")
 TYPO3_URL = os.getenv("TYPO3_URL")
-IMPORT_URL = TYPO3_URL / "/fileadmin/eventImport/new_events.xml"
+IMPORT_URL = f"{TYPO3_URL}/fileadmin/eventImport/new_events.xml"
 STORAGE_PID = os.getenv("STORAGE_PID")
 CATEGORY_MAPPING = os.getenv("CATEGORY_MAPPING")
 
