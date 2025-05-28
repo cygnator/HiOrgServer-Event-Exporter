@@ -20,11 +20,11 @@ BASE_DIR = Path(os.getenv("BASE_DIR"))
 TYPO3_PROJECT_DIR = Path(os.getenv("TYPO3_PROJECT_DIR"))
 TYPO3_URL = os.getenv("TYPO3_URL")
 ALL_EVENTS_FILE = Path(TYPO3_PROJECT_DIR / "hiorgServerFullEvents.json")
-NEW_RSS_FILE = TYPO3_PROJECT_DIR / "public/fileadmin/eventImport/new_events.xml"
+NEW_RSS_FILE = Path(TYPO3_PROJECT_DIR / "public/fileadmin/eventImport/new_events.xml")
 
-DEFAULT_IMAGE = os.getenv("DEFAULT_IMAGE")
-BEREITSCHAFT_IMAGE = os.getenv("BEREITSCHAFT_IMAGE")
-BLUTSPENDE_IMAGE = os.getenv("BLUTSPENDE_IMAGE")
+DEFAULT_IMAGE = Path(os.getenv("DEFAULT_IMAGE"))
+BEREITSCHAFT_IMAGE = Path(os.getenv("BEREITSCHAFT_IMAGE"))
+BLUTSPENDE_IMAGE = Path(os.getenv("BLUTSPENDE_IMAGE"))
 
 # === Ensure paths exist ===
 BASE_DIR.mkdir(parents=True, exist_ok=True)
