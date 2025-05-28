@@ -36,7 +36,7 @@ typo3_cmd = [
 ]
 if Path(f"{TYPO3_PROJECT_DIR}/public/fileadmin/eventImport/new_events.xml").exists():
     print("▶ Importing XML into TYPO3 News...")
-    print(typo3_cmd)
+    #print(typo3_cmd)
     subprocess.run(typo3_cmd, cwd=str(TYPO3_PROJECT_DIR), check=True)
 else:
     print("⚠️ Skipping import: XML file not found.")
