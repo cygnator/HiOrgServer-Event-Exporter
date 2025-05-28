@@ -20,7 +20,7 @@ CATEGORY_MAPPING = os.getenv("CATEGORY_MAPPING")
 
 print(f"\n=== Log from {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===\n")
 # === Step 1: Run XML Exporter ===
-exporter = f"{BASEDIR}hiorgEventScraperXML.py"
+exporter = f"{BASEDIR}/hiorgEventScraperXML.py"
 print(f"▶ Running XML exporter: {exporter}")
 subprocess.run([sys.executable, str(exporter)], check=True)
 
